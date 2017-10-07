@@ -39,17 +39,11 @@ def full?(board)
 end
 
 def draw?(board)
-  WIN_COMBINATIONS.each do |array|
-    pos1 = board[array[0]]
-    pos2 = board[array[1]]
-    pos3 = board[array[2]]
-    if pos1 == pos2 && pos1 == pos3
-      return false
-    elsif pos1 == " " || pos2 == " " || pos3 == " "
-      return false
-    end
+  if !won?(board) && over?(board)
+    return true
+  else
+    return false
   end
-  return true
 end
 
 def over?(board)
