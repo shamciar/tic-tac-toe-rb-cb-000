@@ -119,7 +119,7 @@ def turn(board)
   index = input_to_index(input)
   if valid_move?(board, index)
     t = turn(board)
-    move(board, index, t
+    move(board, index, t)
     display_board(board)
   else
     turn(board)
