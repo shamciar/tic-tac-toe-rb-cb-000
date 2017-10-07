@@ -131,7 +131,7 @@ def play(board)
   until over?(board)
     turn(board)
   end
-  winner = current_player(board)
+  winner = winner(board)
   if won?(board)
     puts "Congratulations #{winner}!"
   elsif draw?(board)
