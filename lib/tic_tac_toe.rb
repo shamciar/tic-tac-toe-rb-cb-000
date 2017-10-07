@@ -126,3 +126,15 @@ def play(board)
     counter += 1
   end
 end
+
+def play(board)
+  until over?(board)
+    turn(board)
+  end
+
+  if won?(board)
+    puts "Congratulations!"
+  elsif draw?(board)
+    puts "It's the Cat's Game"
+  end
+end
